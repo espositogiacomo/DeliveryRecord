@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
-
+//comment
      /*   String[] deliveryPoint = { "8 Prua", "8 Poppa", "6 Prua", "6 Poppa", "Covid" };
 
         Spinner spin = (Spinner) findViewById(R.id.sp_DeliveryPointSelection);
