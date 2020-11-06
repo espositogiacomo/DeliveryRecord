@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.cri.deliveryrecord.ui.home.HomeFragment">
+
+    <Button
+        android:id="@+id/btn_checkGuest"
+        android:layout_width="268dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="12dp"
+        android:onClick="checkGuest"
+        android:text="Controlla Ospite"
+        app:backgroundTint="#F44336"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guestId" />
+
+    <TextView
+        android:id="@+id/label_Result"
+        android:layout_width="394dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#FFEB3B"
+        android:text="KO"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_checkGuest" />
+
+    <TextView
+        android:id="@+id/label_TOT"
+        android:layout_width="162dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#FFFFFF"
+        android:editable="false"
+        android:text="TOT: 0"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FF0000"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <EditText
+        android:id="@+id/guestId"
+        android:layout_width="324dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="Inserisci l'ID dell'ospite"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_TOT" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        app:constraint_referenced_ids="guideline"
+        tools:layout_editor_absoluteX="411dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="255dp"
+        android:layout_height="255dp"
+        android:layout_marginTop="4dp"
+        android:cropToPadding="true"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_Result" />
+
+    <Spinner
+        android:id="@+id/sp_DeliveryPointSelection"
+        style="@style/Widget.AppCompat.Spinner.DropDown"
+        android:layout_width="160dp"
+        android:layout_height="43dp"
+        android:spinnerMode="dialog"
+        app:layout_constraintEnd_toStartOf="@+id/label_TOT"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
